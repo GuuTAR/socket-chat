@@ -1,14 +1,15 @@
 import socket
 import threading
 
-HOST = 'localhost'  # Standard loopback interface address (localhost)
 PORT = 21948       # Port to listen on (non-privileged ports are > 1023)
 
 HEADER_LENGTH = 100
 FORMAT = "utf-8"
 
+host = input("Please insert your IP for hosting : ")
+
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server.bind((HOST, PORT))
+server.bind((host, PORT))
 
 
 def start() :
